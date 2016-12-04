@@ -1,0 +1,62 @@
+﻿<Window x:Class="Employee_Reviews.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Employee_Reviews"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="600">
+    <Grid Margin="2,2,-6.6,-19.2">
+        <ListView x:Name="Roster" HorizontalAlignment="Left" Height="175" Margin="0,30,0,0" VerticalAlignment="Top" Width="133">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <TextBlock Text="{Binding Name}" />
+                        <Button Click="EmployeeSelected">View</Button>
+                    </WrapPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <TextBox x:Name="EmployeeName" GotFocus="ClearSelectedEmployee" HorizontalAlignment="Left" Height="23" Margin="159,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157"/>
+        <TextBox x:Name="Email" GotFocus="ClearSelectedEmployee" HorizontalAlignment="Left" Height="23" Margin="159,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.368"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="PhoneNo" GotFocus="ClearSelectedEmployee" HorizontalAlignment="Left" Height="23" Margin="160,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157"/>
+        <TextBox x:Name="Salary"  GotFocus="ClearSelectedEmployee" HorizontalAlignment="Left" Height="24" Margin="161,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0"/>
+                    <RotateTransform Angle="-0.109"/>
+                    <TranslateTransform X="0.368"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="Raise"  HorizontalAlignment="Left" Height="23" Margin="160,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" />
+        <RadioButton x:Name="Satisfactory" Content="Satisfactory" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" Width="94" FontWeight="Bold"/>
+        <RadioButton x:Name="UnSatisfactory" Content="UnSatisfactory" HorizontalAlignment="Left" Margin="10,230,0,0" VerticalAlignment="Top" Width="112" FontWeight="Bold"/>
+        <TextBox x:Name="Review"  HorizontalAlignment="Left" Height="48" Margin="10,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="306"/>
+        <TextBox x:Name="Department"  HorizontalAlignment="Left" Height="23" Margin="361,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" />
+        <TextBox x:Name="TotalSalary"  HorizontalAlignment="Left" Height="23" Margin="360,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" />
+        <TextBox x:Name="DeptRaise"  HorizontalAlignment="Left" Height="23" Margin="360,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" RenderTransformOrigin="0.352,-0.009"/>
+        <Button x:Name="AddEmployee" Content="Add Employee" HorizontalAlignment="Left" Margin="391,220,0,0" VerticalAlignment="Top" Width="94" Height="25" Click="AddEmployee_Click"/>
+        <Button x:Name="Update" Content="Update Stat" HorizontalAlignment="Left" Margin="391,258,0,0" VerticalAlignment="Top" Width="94" Height="26" Click="UpdateClick"/>
+        <Label x:Name="lbName" Content="Name" HorizontalAlignment="Left" Margin="155,22,0,0" VerticalAlignment="Top" Width="90" FontWeight="Bold"/>
+        <Label x:Name="label" Content="Email Address" HorizontalAlignment="Left" Margin="154,64,0,0" VerticalAlignment="Top" Width="103" FontWeight="Bold"/>
+        <Label x:Name="label1" Content="Phone #" HorizontalAlignment="Left" Margin="154,110,0,0" VerticalAlignment="Top" Width="79" FontWeight="Bold"/>
+        <Label x:Name="label2" Content="Employees" HorizontalAlignment="Left" VerticalAlignment="Top" Width="133" FontWeight="Bold"/>
+        <Label x:Name="label3" Content="Salary" HorizontalAlignment="Left" Margin="155,156,0,0" VerticalAlignment="Top" Width="79" FontWeight="Bold"/>
+        <Label x:Name="label4" Content="Salary Increase" HorizontalAlignment="Left" Margin="154,201,0,0" VerticalAlignment="Top" Width="118" FontWeight="Bold"/>
+        <Label x:Name="label5" Content="Department" HorizontalAlignment="Left" Margin="357,33,0,0" VerticalAlignment="Top" Width="93" FontWeight="Bold"/>
+        <Label x:Name="label6" Content="Department Salary (Total)" HorizontalAlignment="Left" Margin="355,91,0,0" VerticalAlignment="Top" Width="158" FontWeight="Bold"/>
+        <Label x:Name="label7" Content="Department Salary Increase" HorizontalAlignment="Left" Margin="356,156,0,0" VerticalAlignment="Top" Width="172" FontWeight="Bold"/>
+
+    </Grid>
+</Window>
