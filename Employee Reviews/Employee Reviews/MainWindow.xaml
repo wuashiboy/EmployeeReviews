@@ -29,7 +29,7 @@
             </TextBox.RenderTransform>
         </TextBox>
         <TextBox x:Name="PhoneNo" GotFocus="ClearSelectedEmployee" HorizontalAlignment="Left" Height="23" Margin="160,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157"/>
-        <TextBox x:Name="Salary"  GotFocus="ClearSelectedEmployee" HorizontalAlignment="Left" Height="24" Margin="161,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" RenderTransformOrigin="0.5,0.5">
+        <TextBox x:Name="Salary"  GotFocus="ClearSelectedEmployee" HorizontalAlignment="Left" Height="24" Margin="161,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" RenderTransformOrigin="0.5,0.5" TextChanged="Salary_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -39,7 +39,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="Raise"  HorizontalAlignment="Left" Height="23" Margin="160,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" />
+        <TextBox x:Name="Raise"  HorizontalAlignment="Left" Height="23" Margin="160,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" TextChanged="Raise_TextChanged_1" />
         <RadioButton x:Name="Satisfactory" Content="Satisfactory" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" Width="94" FontWeight="Bold"/>
         <RadioButton x:Name="UnSatisfactory" Content="UnSatisfactory" HorizontalAlignment="Left" Margin="10,230,0,0" VerticalAlignment="Top" Width="112" FontWeight="Bold"/>
         <TextBox x:Name="Review"  HorizontalAlignment="Left" Height="48" Margin="10,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="306"/>

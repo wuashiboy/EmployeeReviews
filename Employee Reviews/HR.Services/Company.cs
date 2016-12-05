@@ -24,13 +24,14 @@ namespace HR.Services
             return employee;
         }
 
-        public void UpdateEmployeeStats(Guid selectedEmployee, int salaryincrease, double deptsalinc, string raise, string review)
+        public void UpdateEmployeeStats(Guid selectedEmployee, int salaryincrease, double deptsalinc, string raise, string review, double salary)
         {
             var employee = Employees.FirstOrDefault(f => f.Id == selectedEmployee);
             employee.Money.SalaryIncrease = salaryincrease;
             employee.Money.DepartInc = deptsalinc;
             employee.Money.Review = review;
             employee.Money.Raise = raise;
+            
             
             //employee.Money.DepartIncTotal = departsaltotal;
             Employees.Add(employee);

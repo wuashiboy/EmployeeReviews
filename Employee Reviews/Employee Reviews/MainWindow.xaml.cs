@@ -79,14 +79,22 @@ namespace Employee_Reviews
         private void UpdateClick(object sender, RoutedEventArgs e)
         {
 
-            
+            var salary = double.Parse(this.Salary.Text);
+            var saladd = double.Parse(this.Raise.Text);
+            var total = salary + saladd;
+            var btn = Update as Button;
+            if (btn != null)
+            {
+                Salary.Text = total.ToString();
+            }
             var salaryincrease = int.Parse(this.Raise.Text);
             var departinc = double.Parse(this.DeptRaise.Text);
             var review = this.Review.Text;
             var raise = this.Salary.Text;
-            
-            Company.UpdateEmployeeStats(SelectedEmployee, salaryincrease, departinc, raise, review);
 
+           
+            Company.UpdateEmployeeStats(SelectedEmployee, salaryincrease, departinc, raise, review, salary);
+           
         }
 
         private void TotalSalary_TextChanged(object sender, TextChangedEventArgs e)
@@ -97,15 +105,18 @@ namespace Employee_Reviews
 
         private void Raise_TextChanged(object sender, TextChangedEventArgs e)
         {
-            var salary = double.Parse(this.Salary.Text);
-            var saladd = double.Parse(this.Raise.Text);
-            var total = salary + saladd;
-            var btn = Update as Button;
-            if (btn != null)
-            {
-                Salary.Text = total.ToString();
-            }
+            
 
+        }
+
+        private void Salary_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Salary.Text = Salary.Text + Raise.Text;
+        }
+
+        private void Raise_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+           
         }
     }
 }
